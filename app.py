@@ -1,10 +1,11 @@
 import streamlit as st
 import pickle
 import numpy as np
+import joblib
 
 # Load the model
 with open("model.pkl", "rb") as file:
-    model = pickle.load(file)
+    model =joblib.load("model.pkl")
 
 st.set_page_config(page_title="House Price Prediction", layout="centered")
 st.title("🏠 House Price Prediction App")
